@@ -139,7 +139,7 @@ Public Class Form1
         Dim x As Integer
         Dim y As Integer
         x = Screen.PrimaryScreen.WorkingArea.Width - 300
-        y = Screen.PrimaryScreen.WorkingArea.Height - 500
+        y = Screen.PrimaryScreen.WorkingArea.Height - 621
         Me.Location = New Point(x, y)
 
         'For Each p5 As Process In Process.GetProcesses()

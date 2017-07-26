@@ -32,11 +32,12 @@ Partial Class Form1
         Me.tmrWelcome = New System.Windows.Forms.Timer(Me.components)
         Me.tmrHotkey = New System.Windows.Forms.Timer(Me.components)
         Me.FormSkin1 = New BillardRestarter_Bot.FormSkin()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.FlatMini1 = New BillardRestarter_Bot.FlatMini()
         Me.FlatClose1 = New BillardRestarter_Bot.FlatClose()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.FlatListBox1 = New BillardRestarter_Bot.FlatListBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.FormSkin1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -76,6 +77,7 @@ Partial Class Form1
         Me.FormSkin1.BackColor = System.Drawing.Color.White
         Me.FormSkin1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.FormSkin1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.FormSkin1.Controls.Add(Me.Label2)
         Me.FormSkin1.Controls.Add(Me.Label1)
         Me.FormSkin1.Controls.Add(Me.FlatMini1)
         Me.FormSkin1.Controls.Add(Me.FlatClose1)
@@ -88,9 +90,21 @@ Partial Class Form1
         Me.FormSkin1.HeaderMaximize = False
         Me.FormSkin1.Location = New System.Drawing.Point(0, 0)
         Me.FormSkin1.Name = "FormSkin1"
-        Me.FormSkin1.Size = New System.Drawing.Size(297, 488)
+        Me.FormSkin1.Size = New System.Drawing.Size(297, 614)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "Billard RestarterBot"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.YellowGreen
+        Me.Label1.Location = New System.Drawing.Point(6, 68)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(78, 16)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Version: 1.2"
         '
         'FlatMini1
         '
@@ -137,27 +151,27 @@ Partial Class Form1
         Me.FlatListBox1.Location = New System.Drawing.Point(3, 90)
         Me.FlatListBox1.Name = "FlatListBox1"
         Me.FlatListBox1.SelectedColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.FlatListBox1.Size = New System.Drawing.Size(290, 395)
+        Me.FlatListBox1.Size = New System.Drawing.Size(290, 521)
         Me.FlatListBox1.TabIndex = 0
         Me.FlatListBox1.Text = "FlatListBox1"
         '
-        'Label1
+        'Label2
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.YellowGreen
-        Me.Label1.Location = New System.Drawing.Point(6, 68)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 16)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Version: 1.2"
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DarkSeaGreen
+        Me.Label2.Location = New System.Drawing.Point(233, 68)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(60, 16)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "07/25/17"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(297, 488)
+        Me.ClientSize = New System.Drawing.Size(297, 614)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
@@ -184,4 +198,5 @@ Partial Class Form1
     Friend WithEvents tmrWelcome As Timer
     Friend WithEvents tmrHotkey As Timer
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
