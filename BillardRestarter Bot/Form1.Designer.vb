@@ -32,12 +32,13 @@ Partial Class Form1
         Me.tmrWelcome = New System.Windows.Forms.Timer(Me.components)
         Me.tmrHotkey = New System.Windows.Forms.Timer(Me.components)
         Me.FormSkin1 = New BillardRestarter_Bot.FormSkin()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FlatMini1 = New BillardRestarter_Bot.FlatMini()
         Me.FlatClose1 = New BillardRestarter_Bot.FlatClose()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.FlatListBox1 = New BillardRestarter_Bot.FlatListBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.FormSkin1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -77,6 +78,7 @@ Partial Class Form1
         Me.FormSkin1.BackColor = System.Drawing.Color.White
         Me.FormSkin1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.FormSkin1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.FormSkin1.Controls.Add(Me.Label3)
         Me.FormSkin1.Controls.Add(Me.Label2)
         Me.FormSkin1.Controls.Add(Me.Label1)
         Me.FormSkin1.Controls.Add(Me.FlatMini1)
@@ -93,6 +95,31 @@ Partial Class Form1
         Me.FormSkin1.Size = New System.Drawing.Size(297, 614)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "Billard RestarterBot"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label3.Location = New System.Drawing.Point(221, 51)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(73, 16)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Test Button"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DarkSeaGreen
+        Me.Label2.Location = New System.Drawing.Point(190, 71)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(101, 16)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "07/26/17 : 1010"
         '
         'Label1
         '
@@ -155,18 +182,6 @@ Partial Class Form1
         Me.FlatListBox1.TabIndex = 0
         Me.FlatListBox1.Text = "FlatListBox1"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.DarkSeaGreen
-        Me.Label2.Location = New System.Drawing.Point(233, 68)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 16)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "07/25/17"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -199,4 +214,5 @@ Partial Class Form1
     Friend WithEvents tmrHotkey As Timer
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

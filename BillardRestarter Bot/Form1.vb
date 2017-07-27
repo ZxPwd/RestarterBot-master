@@ -142,37 +142,44 @@ Public Class Form1
         y = Screen.PrimaryScreen.WorkingArea.Height - 621
         Me.Location = New Point(x, y)
 
+
         'For Each p5 As Process In Process.GetProcesses()
         '    If p5.ProcessName = "BlueStacks_old" Then 'Or p.ProcessName = "mspaint"
         '        p5.Kill()
         '        FlatListBox1.AddItem("TERMINATED: BlueStacks_old.exe")
+
+        '    ElseIf p5.ProcessName = "BlueStacks_old" Then 'Or p.ProcessName = "mspaint"
+        '        p5.Kill()
+        '        FlatListBox1.AddItem("TERMINATED: HD-RunApp.exe {NEW}")
         '    Else
         '        Process.Start("C:\ProgramData\BlueStacksGameManager\BlueStacks_old.exe")
 
         '    End If
-        'Next
-        For Each p5 As Process In Process.GetProcesses()
-            If p5.ProcessName = "BlueStacks_old" Then 'Or p.ProcessName = "mspaint"
-                p5.Kill()
-                FlatListBox1.AddItem("TERMINATED: BlueStacks_old.exe")
 
-            ElseIf p5.ProcessName = "BlueStacks_old" Then 'Or p.ProcessName = "mspaint"
+        'Next
+
+        For Each p5 As Process In Process.GetProcesses()
+            If p5.ProcessName = "BlueStacks" Then 'Or p.ProcessName = "mspaint"
+                p5.Kill()
+                FlatListBox1.AddItem("TERMINATED: BlueStacks.exe")
+
+            ElseIf p5.ProcessName = "BlueStacks" Then 'Or p.ProcessName = "mspaint"
                 p5.Kill()
                 FlatListBox1.AddItem("TERMINATED: HD-RunApp.exe {NEW}")
             Else
-                Process.Start("C:\ProgramData\BlueStacksGameManager\BlueStacks_old.exe")
+                Process.Start("C:\ProgramData\BlueStacksGameManager\BlueStacks.exe")
 
             End If
 
         Next
-
+        FlatListBox1.AddItem("tmrBsTv")
         tmrBsTv.Start()
     End Sub
     Private Sub tmrStartBot2_Tick_1(sender As Object, e As EventArgs) Handles tmrStartBot2.Tick
         tmrStartBot2.Interval = 2000
 
-        If PressButton(My.Resources.billard_inactive, True, 10, 10) Or
-        PressButton(My.Resources.billard_active, True, 10, 10) Then
+        If PressButton(My.Resources.billard_inactive2, True, 10, 10) Or
+        PressButton(My.Resources.billard_active2, True, 10, 10) Then
             FlatListBox1.AddItem("Detected Android Home")
 
             PerformMouseClick("LClick")
