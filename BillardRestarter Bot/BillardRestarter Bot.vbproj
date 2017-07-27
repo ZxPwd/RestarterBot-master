@@ -155,6 +155,7 @@
   <ItemGroup>
     <None Include="Resources\billard_inactive2.png" />
     <None Include="Resources\billard_active2.png" />
+    <None Include="Resources\billard_inactive3.bmp" />
     <Content Include="restarter.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
