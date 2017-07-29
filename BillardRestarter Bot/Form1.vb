@@ -163,16 +163,27 @@ Public Class Form1
             If p5.ProcessName = "BlueStacks" Then 'Or p.ProcessName = "mspaint"
                 p5.Kill()
                 FlatListBox1.AddItem("TERMINATED: BlueStacks.exe")
-            ElseIf p5.ProcessName = "BlueStacks" Then 'Or p.ProcessName = "mspaint"
+            ElseIf p5.ProcessName = "HD-RunApp" Then 'Or p.ProcessName = "mspaint"
                 p5.Kill()
                 FlatListBox1.AddItem("TERMINATED: HD-RunApp.exe")
+            ElseIf p5.ProcessName = "HD-RunAppTemp" Then 'Or p.ProcessName = "mspaint"
+                p5.Kill()
+                FlatListBox1.AddItem("TERMINATED: HD-RunAppTemp.exe")
+            ElseIf p5.ProcessName = "HD-UpdateInstaller" Then 'Or p.ProcessName = "mspaint"
+                p5.Kill()
+                FlatListBox1.AddItem("TERMINATED: HD-UpdateInstaller.exe")
+            ElseIf p5.ProcessName = "HD-UpdateService" Then 'Or p.ProcessName = "mspaint"
+                p5.Kill()
+                FlatListBox1.AddItem("TERMINATED: HD-UpdateService")
             Else
+
                 Process.Start("C:\ProgramData\BlueStacksGameManager\BlueStacks.exe")
             End If
         Next
 
 
-        FlatListBox1.AddItem("tmrBsTv")
+
+        FlatListBox1.AddItem("tmrBsTv Next")
         tmrBsTv.Start()
     End Sub
     Private Sub tmrStartBot2_Tick_1(sender As Object, e As EventArgs) Handles tmrStartBot2.Tick
