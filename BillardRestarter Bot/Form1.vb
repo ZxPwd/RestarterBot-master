@@ -109,12 +109,12 @@ Public Class Form1
 
         tmrStartBot.Interval = 2000
         If PressButton(My.Resources.android_inactive, True, 10, 10) Then
-            FlatListBox1.AddItem("InactiveTab Found!")
+            FlatListBox1.Items.Add("InactiveTab Found!")
             PerformMouseClick("LClick")
             PerformMouseClick("LClick")
 
-            FlatListBox1.AddItem("STOPPED: tmrStartBot")
-            FlatListBox1.AddItem("STARTED: tmrPause Enabled = True [Wait 25 SEC]")
+            FlatListBox1.Items.Add("STOPPED: tmrStartBot")
+            FlatListBox1.Items.Add("STARTED: tmrPause Enabled = True [Wait 25 SEC]")
 
             tmrStartBot.Stop()
             tmrPause.Enabled = True
@@ -127,8 +127,8 @@ Public Class Form1
 
     Private Sub tmrPause_Tick(sender As Object, e As EventArgs) Handles tmrPause.Tick
         tmrPause.Enabled = False
-        FlatListBox1.AddItem("STOPPED: tmrPause Enabled = False [Done 25 SEC]")
-        FlatListBox1.AddItem("STARTED: tmrStartBot2")
+        FlatListBox1.Items.Add("STOPPED: tmrPause Enabled = False [Done 25 SEC]")
+        FlatListBox1.Items.Add("STARTED: tmrStartBot2")
         status("TmrPause")
         tmrStartBot2.Start()
     End Sub
@@ -147,11 +147,11 @@ Public Class Form1
         'For Each p5 As Process In Process.GetProcesses()
         '    If p5.ProcessName = "BlueStacks_old" Then 'Or p.ProcessName = "mspaint"
         '        p5.Kill()
-        '        FlatListBox1.AddItem("TERMINATED: BlueStacks_old.exe")
+        '         FlatListBox1.Items.Add("TERMINATED: BlueStacks_old.exe")
 
         '    ElseIf p5.ProcessName = "BlueStacks_old" Then 'Or p.ProcessName = "mspaint"
         '        p5.Kill()
-        '        FlatListBox1.AddItem("TERMINATED: HD-RunApp.exe {NEW}")
+        '         FlatListBox1.Items.Add("TERMINATED: HD-RunApp.exe {NEW}")
         '    Else
         '        Process.Start("C:\ProgramData\BlueStacksGameManager\BlueStacks_old.exe")
 
@@ -162,19 +162,19 @@ Public Class Form1
         For Each p5 As Process In Process.GetProcesses()
             If p5.ProcessName = "BlueStacks" Then 'Or p.ProcessName = "mspaint"
                 p5.Kill()
-                FlatListBox1.AddItem("TERMINATED: BlueStacks.exe")
+                FlatListBox1.Items.Add("TERMINATED: BlueStacks.exe")
             ElseIf p5.ProcessName = "HD-RunApp" Then 'Or p.ProcessName = "mspaint"
                 p5.Kill()
-                FlatListBox1.AddItem("TERMINATED: HD-RunApp.exe")
+                FlatListBox1.Items.Add("TERMINATED: HD-RunApp.exe")
             ElseIf p5.ProcessName = "HD-RunAppTemp" Then 'Or p.ProcessName = "mspaint"
                 p5.Kill()
-                FlatListBox1.AddItem("TERMINATED: HD-RunAppTemp.exe")
+                FlatListBox1.Items.Add("TERMINATED: HD-RunAppTemp.exe")
             ElseIf p5.ProcessName = "HD-UpdateInstaller" Then 'Or p.ProcessName = "mspaint"
                 p5.Kill()
-                FlatListBox1.AddItem("TERMINATED: HD-UpdateInstaller.exe")
+                FlatListBox1.Items.Add("TERMINATED: HD-UpdateInstaller.exe")
             ElseIf p5.ProcessName = "HD-UpdateService" Then 'Or p.ProcessName = "mspaint"
                 p5.Kill()
-                FlatListBox1.AddItem("TERMINATED: HD-UpdateService")
+                FlatListBox1.Items.Add("TERMINATED: HD-UpdateService")
             Else
 
                 Process.Start("C:\ProgramData\BlueStacksGameManager\BlueStacks.exe")
@@ -183,37 +183,75 @@ Public Class Form1
 
 
 
-        FlatListBox1.AddItem("tmrBsTv Next")
+        FlatListBox1.Items.Add("tmrBsTv Next")
         tmrBsTv.Start()
     End Sub
     Private Sub tmrStartBot2_Tick_1(sender As Object, e As EventArgs) Handles tmrStartBot2.Tick
         tmrStartBot2.Interval = 2000
-        FlatListBox1.AddItem("Searching: For Inactive/Active Game Icons")
+
+
+        Dim i As Int16 = 0
+        Dim test As String
+        Try
+            Do
+                test = FlatListBox1.Items(i)
+                i = i + 1
+            Loop
+        Catch
+            lblItemCount.Text = i.ToString
+
+        End Try
+
+
+        FlatListBox1.Items.Add("Searching: For Inactive/Active Game Icons")
+
+        If lblItemCount.Text = "55" Then
+            tmrWelcome.Enabled = False
+            tmrStartBot.Stop()
+            tmrStartBot3.Stop()
+            tmrWait.Stop()
+            tmrPause.Stop()
+            tmrStartBot2.Stop()
+            FlatListBox1.Items.Clear()
+            tmrWelcome.Enabled = True
+            lblItemCount.Text = ("0")
+
+
+
+        Else
+
+        End If
+
+
+
+
+
+
 
 
 
         If PressButton(My.Resources.billard_inactive3, True, 10, 10) Then
-            FlatListBox1.AddItem("Inactive Game Found! {1013}")
+            FlatListBox1.Items.Add("Inactive Game Found! {1013}")
             PerformMouseClick("LClick")
             PerformMouseClick("LClick")
         ElseIf PressButton(My.Resources.billard_inactive2, True, 10, 10) Then
-            FlatListBox1.AddItem("Inactive Game Found! {1013}")
+            FlatListBox1.Items.Add("Inactive Game Found! {1013}")
             PerformMouseClick("LClick")
             PerformMouseClick("LClick")
 
         ElseIf PressButton(My.Resources.billard_inactive, True, 10, 10) Then
-            FlatListBox1.AddItem("Inactive Game Found! {1013}")
+            FlatListBox1.Items.Add("Inactive Game Found! {1013}")
             PerformMouseClick("LClick")
             PerformMouseClick("LClick")
 
         ElseIf PressButton(My.Resources.billard_active2, True, 10, 10) Then
-            FlatListBox1.AddItem("Active Game Found! {1013}")
+            FlatListBox1.Items.Add("Active Game Found! {1013}")
             PerformMouseClick("LClick")
             PerformMouseClick("LClick")
 
             tmrWait.Enabled = True
-            FlatListBox1.AddItem("STARTED: tmrWait")
-            FlatListBox1.AddItem("Waiting 3 Seconds")
+            FlatListBox1.Items.Add("STARTED: tmrWait")
+            FlatListBox1.Items.Add("Waiting 3 Seconds")
 
             'tmrStartBot2.Stop()
 
@@ -226,9 +264,9 @@ Public Class Form1
 
     Private Sub tmrWait_Tick(sender As Object, e As EventArgs) Handles tmrWait.Tick
         tmrWait.Enabled = False
-        FlatListBox1.AddItem("2 Second wait finished")
-        FlatListBox1.AddItem("Waiting for Miniclip")
-        FlatListBox1.AddItem("STARTED: tmrStartBot3")
+        FlatListBox1.Items.Add("2 Second wait finished")
+        FlatListBox1.Items.Add("Waiting for Miniclip")
+        FlatListBox1.Items.Add("STARTED: tmrStartBot3")
         tmrStartBot3.Start()
 
 
@@ -238,7 +276,7 @@ Public Class Form1
         On Error Resume Next
         tmrStartBot3.Interval = 2000
         If PressButton(My.Resources.miniclip, True, 10, 10) Then
-            FlatListBox1.AddItem("Miniclip Detected")
+            FlatListBox1.Items.Add("Miniclip Detected")
             Process.Start("BillardBot.exe")
             End
 
@@ -256,9 +294,9 @@ Public Class Form1
         If PressButton(My.Resources.bstvexit, True, 10, 10) Then
             PerformMouseClick("LClick")
             PerformMouseClick("LClick")
-            FlatListBox1.AddItem("TERIMINATED: BlueStacks TV ")
+            FlatListBox1.Items.Add("TERIMINATED: BlueStacks TV ")
             tmrBsTv.Stop()
-            FlatListBox1.AddItem("STARTED: tmrStartBot")
+            FlatListBox1.Items.Add("STARTED: tmrStartBot")
             tmrStartBot.Start()
         Else
             status("TmrBsTv")
@@ -290,14 +328,15 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tmrHotkey.Start()
-        FlatListBox1.AddItem("EXIT HOTKEY: Numpad + 0")
+        FlatListBox1.Items.Add("EXIT HOTKEY: Numpad + 0")
         tmrWelcome.Enabled = True
-        FlatListBox1.AddItem("STARTING IN 5 SECONDS!")
+        FlatListBox1.Items.Add("STARTING IN 5 SECONDS!")
+
     End Sub
 
 
 
-    Private Sub FlatListBox1_Click(sender As Object, e As EventArgs) Handles FlatListBox1.Click
+    Private Sub FlatListBox1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -307,35 +346,44 @@ Public Class Form1
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
         tmrStartBot2.Interval = 2000
-        FlatListBox1.AddItem("CONTINUE: tmrStartBot2 {1013}")
+        FlatListBox1.Items.Add("CONTINUE: tmrStartBot2 {1013}")
 
         If PressButton(My.Resources.billard_inactive3, True, 10, 10) Then
-            FlatListBox1.AddItem("Inactive Game Found! {1013}")
+            FlatListBox1.Items.Add("Inactive Game Found! {1013}")
             PerformMouseClick("LClick")
             PerformMouseClick("LClick")
         ElseIf PressButton(My.Resources.billard_inactive2, True, 10, 10) Then
-            FlatListBox1.AddItem("Inactive Game Found! {1013}")
+            FlatListBox1.Items.Add("Inactive Game Found! {1013}")
             PerformMouseClick("LClick")
             PerformMouseClick("LClick")
 
         ElseIf PressButton(My.Resources.billard_inactive, True, 10, 10) Then
-            FlatListBox1.AddItem("Inactive Game Found! {1013}")
+            FlatListBox1.Items.Add("Inactive Game Found! {1013}")
             PerformMouseClick("LClick")
             PerformMouseClick("LClick")
 
         ElseIf PressButton(My.Resources.billard_active2, True, 10, 10) Then
-            FlatListBox1.AddItem("Active Game Found! {1013}")
+            FlatListBox1.Items.Add("Active Game Found! {1013}")
             PerformMouseClick("LClick")
             PerformMouseClick("LClick")
 
             tmrWait.Enabled = True
-            FlatListBox1.AddItem("STARTED: tmrWait")
-            FlatListBox1.AddItem("Waiting 3 seconds")
+            FlatListBox1.Items.Add("STARTED: tmrWait")
+            FlatListBox1.Items.Add("Waiting 3 seconds")
 
             'tmrStartBot2.Stop()
 
         Else
             status("TmrStartBot2")
         End If
+    End Sub
+
+
+    Private Sub FlatListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub lblItemCount_Click(sender As Object, e As EventArgs) Handles lblItemCount.Click
+
     End Sub
 End Class

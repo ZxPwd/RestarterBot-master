@@ -32,6 +32,9 @@ Partial Class Form1
         Me.tmrWelcome = New System.Windows.Forms.Timer(Me.components)
         Me.tmrHotkey = New System.Windows.Forms.Timer(Me.components)
         Me.FormSkin1 = New BillardRestarter_Bot.FormSkin()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.FlatListBox1 = New System.Windows.Forms.ListBox()
+        Me.lblItemCount = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -39,7 +42,6 @@ Partial Class Form1
         Me.FlatMini1 = New BillardRestarter_Bot.FlatMini()
         Me.FlatClose1 = New BillardRestarter_Bot.FlatClose()
         Me.lblStatus = New System.Windows.Forms.Label()
-        Me.FlatListBox1 = New BillardRestarter_Bot.FlatListBox()
         Me.FormSkin1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -80,6 +82,9 @@ Partial Class Form1
         Me.FormSkin1.BackColor = System.Drawing.Color.White
         Me.FormSkin1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.FormSkin1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.FormSkin1.Controls.Add(Me.Label6)
+        Me.FormSkin1.Controls.Add(Me.FlatListBox1)
+        Me.FormSkin1.Controls.Add(Me.lblItemCount)
         Me.FormSkin1.Controls.Add(Me.Label3)
         Me.FormSkin1.Controls.Add(Me.Label4)
         Me.FormSkin1.Controls.Add(Me.Label2)
@@ -87,7 +92,6 @@ Partial Class Form1
         Me.FormSkin1.Controls.Add(Me.FlatMini1)
         Me.FormSkin1.Controls.Add(Me.FlatClose1)
         Me.FormSkin1.Controls.Add(Me.lblStatus)
-        Me.FormSkin1.Controls.Add(Me.FlatListBox1)
         Me.FormSkin1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FormSkin1.FlatColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.FormSkin1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
@@ -95,9 +99,45 @@ Partial Class Form1
         Me.FormSkin1.HeaderMaximize = False
         Me.FormSkin1.Location = New System.Drawing.Point(0, 0)
         Me.FormSkin1.Name = "FormSkin1"
-        Me.FormSkin1.Size = New System.Drawing.Size(297, 614)
+        Me.FormSkin1.Size = New System.Drawing.Size(304, 614)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "Billard RestarterBot"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(5, 102)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(72, 21)
+        Me.Label6.TabIndex = 2
+        Me.Label6.Text = "MAX 55:"
+        '
+        'FlatListBox1
+        '
+        Me.FlatListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.FlatListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FlatListBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.FlatListBox1.ForeColor = System.Drawing.SystemColors.Info
+        Me.FlatListBox1.FormattingEnabled = True
+        Me.FlatListBox1.ItemHeight = 15
+        Me.FlatListBox1.Location = New System.Drawing.Point(9, 137)
+        Me.FlatListBox1.Name = "FlatListBox1"
+        Me.FlatListBox1.Size = New System.Drawing.Size(285, 467)
+        Me.FlatListBox1.TabIndex = 12
+        '
+        'lblItemCount
+        '
+        Me.lblItemCount.AutoSize = True
+        Me.lblItemCount.BackColor = System.Drawing.Color.Transparent
+        Me.lblItemCount.ForeColor = System.Drawing.Color.Red
+        Me.lblItemCount.Location = New System.Drawing.Point(74, 102)
+        Me.lblItemCount.Name = "lblItemCount"
+        Me.lblItemCount.Size = New System.Drawing.Size(19, 21)
+        Me.lblItemCount.TabIndex = 10
+        Me.lblItemCount.Text = "0"
         '
         'Label3
         '
@@ -134,7 +174,7 @@ Partial Class Form1
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(101, 16)
         Me.Label2.TabIndex = 8
-        Me.Label2.Text = "07/27/17 : 1013"
+        Me.Label2.Text = "07/30/17 : 1018"
         '
         'Label1
         '
@@ -154,7 +194,7 @@ Partial Class Form1
         Me.FlatMini1.BackColor = System.Drawing.Color.White
         Me.FlatMini1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.FlatMini1.Font = New System.Drawing.Font("Marlett", 12.0!)
-        Me.FlatMini1.Location = New System.Drawing.Point(251, 16)
+        Me.FlatMini1.Location = New System.Drawing.Point(258, 16)
         Me.FlatMini1.Name = "FlatMini1"
         Me.FlatMini1.Size = New System.Drawing.Size(18, 18)
         Me.FlatMini1.TabIndex = 6
@@ -167,7 +207,7 @@ Partial Class Form1
         Me.FlatClose1.BackColor = System.Drawing.Color.White
         Me.FlatClose1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.FlatClose1.Font = New System.Drawing.Font("Marlett", 10.0!)
-        Me.FlatClose1.Location = New System.Drawing.Point(275, 16)
+        Me.FlatClose1.Location = New System.Drawing.Point(282, 16)
         Me.FlatClose1.Name = "FlatClose1"
         Me.FlatClose1.Size = New System.Drawing.Size(18, 18)
         Me.FlatClose1.TabIndex = 5
@@ -186,22 +226,11 @@ Partial Class Form1
         Me.lblStatus.TabIndex = 4
         Me.lblStatus.Text = "Waiting..."
         '
-        'FlatListBox1
-        '
-        Me.FlatListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.FlatListBox1.items = New String() {""}
-        Me.FlatListBox1.Location = New System.Drawing.Point(3, 104)
-        Me.FlatListBox1.Name = "FlatListBox1"
-        Me.FlatListBox1.SelectedColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.FlatListBox1.Size = New System.Drawing.Size(290, 507)
-        Me.FlatListBox1.TabIndex = 0
-        Me.FlatListBox1.Text = "FlatListBox1"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(297, 614)
+        Me.ClientSize = New System.Drawing.Size(304, 614)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
@@ -215,7 +244,6 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents FormSkin1 As FormSkin
-    Friend WithEvents FlatListBox1 As FlatListBox
     Friend WithEvents lblStatus As Label
     Friend WithEvents FlatClose1 As FlatClose
     Friend WithEvents FlatMini1 As FlatMini
@@ -231,4 +259,7 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents lblItemCount As Label
+    Friend WithEvents FlatListBox1 As ListBox
+    Friend WithEvents Label6 As Label
 End Class
