@@ -121,12 +121,6 @@
   <data name="android_inactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\android_inactive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="android_runningapp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\android_runningapp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="android_wait" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\android_wait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="billard_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\billard_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

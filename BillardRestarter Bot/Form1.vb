@@ -183,7 +183,7 @@ Public Class Form1
 
 
 
-        FlatListBox1.Items.Add("tmrBsTv Next")
+        FlatListBox1.Items.Add("tmrWelcome Finished - Start tmrBsTv")
         tmrBsTv.Start()
     End Sub
     Private Sub tmrStartBot2_Tick_1(sender As Object, e As EventArgs) Handles tmrStartBot2.Tick
@@ -205,7 +205,7 @@ Public Class Form1
 
         FlatListBox1.Items.Add("Searching: For Inactive/Active Game Icons")
 
-        If lblItemCount.Text = "55" Then
+        If lblItemCount.Text = "75" Then
             tmrWelcome.Enabled = False
             tmrStartBot.Stop()
             tmrStartBot3.Stop()
@@ -290,17 +290,19 @@ Public Class Form1
 
     Private Sub tmrBsTv_Tick(sender As Object, e As EventArgs) Handles tmrBsTv.Tick
         Thread.Sleep(2000)
-        tmrBsTv.Interval = 2000
-        If PressButton(My.Resources.bstvexit, True, 10, 10) Then
-            PerformMouseClick("LClick")
-            PerformMouseClick("LClick")
-            FlatListBox1.Items.Add("TERIMINATED: BlueStacks TV ")
-            tmrBsTv.Stop()
-            FlatListBox1.Items.Add("STARTED: tmrStartBot")
-            tmrStartBot.Start()
-        Else
-            status("TmrBsTv")
-        End If
+        'tmrBsTv.Interval = 2000
+        'If PressButton(My.Resources.bstvexit, True, 10, 10) Then
+        '    PerformMouseClick("LClick")
+        '    PerformMouseClick("LClick")
+        '    FlatListBox1.Items.Add("TERIMINATED: BlueStacks TV ")
+        '    tmrBsTv.Stop()
+        '    FlatListBox1.Items.Add("STARTED: tmrStartBot")
+        '    tmrStartBot.Start()
+        'Else
+        '    status("TmrBsTv")
+        'End If
+        tmrBsTv.Stop()
+        tmrStartBot.Start()
     End Sub
 
     Dim hotkey0 As Boolean
@@ -344,39 +346,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-        tmrStartBot2.Interval = 2000
-        FlatListBox1.Items.Add("CONTINUE: tmrStartBot2 {1013}")
 
-        If PressButton(My.Resources.billard_inactive3, True, 10, 10) Then
-            FlatListBox1.Items.Add("Inactive Game Found! {1013}")
-            PerformMouseClick("LClick")
-            PerformMouseClick("LClick")
-        ElseIf PressButton(My.Resources.billard_inactive2, True, 10, 10) Then
-            FlatListBox1.Items.Add("Inactive Game Found! {1013}")
-            PerformMouseClick("LClick")
-            PerformMouseClick("LClick")
-
-        ElseIf PressButton(My.Resources.billard_inactive, True, 10, 10) Then
-            FlatListBox1.Items.Add("Inactive Game Found! {1013}")
-            PerformMouseClick("LClick")
-            PerformMouseClick("LClick")
-
-        ElseIf PressButton(My.Resources.billard_active2, True, 10, 10) Then
-            FlatListBox1.Items.Add("Active Game Found! {1013}")
-            PerformMouseClick("LClick")
-            PerformMouseClick("LClick")
-
-            tmrWait.Enabled = True
-            FlatListBox1.Items.Add("STARTED: tmrWait")
-            FlatListBox1.Items.Add("Waiting 3 seconds")
-
-            'tmrStartBot2.Stop()
-
-        Else
-            status("TmrStartBot2")
-        End If
-    End Sub
 
 
     Private Sub FlatListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
@@ -384,6 +354,10 @@ Public Class Form1
     End Sub
 
     Private Sub lblItemCount_Click(sender As Object, e As EventArgs) Handles lblItemCount.Click
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
     End Sub
 End Class

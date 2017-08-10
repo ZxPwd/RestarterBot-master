@@ -35,10 +35,8 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.FlatListBox1 = New System.Windows.Forms.ListBox()
         Me.lblItemCount = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.FlatMini1 = New BillardRestarter_Bot.FlatMini()
         Me.FlatClose1 = New BillardRestarter_Bot.FlatClose()
         Me.lblStatus = New System.Windows.Forms.Label()
@@ -85,10 +83,8 @@ Partial Class Form1
         Me.FormSkin1.Controls.Add(Me.Label6)
         Me.FormSkin1.Controls.Add(Me.FlatListBox1)
         Me.FormSkin1.Controls.Add(Me.lblItemCount)
-        Me.FormSkin1.Controls.Add(Me.Label3)
         Me.FormSkin1.Controls.Add(Me.Label4)
         Me.FormSkin1.Controls.Add(Me.Label2)
-        Me.FormSkin1.Controls.Add(Me.Label1)
         Me.FormSkin1.Controls.Add(Me.FlatMini1)
         Me.FormSkin1.Controls.Add(Me.FlatClose1)
         Me.FormSkin1.Controls.Add(Me.lblStatus)
@@ -109,23 +105,24 @@ Partial Class Form1
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(5, 102)
+        Me.Label6.Location = New System.Drawing.Point(5, 84)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(72, 21)
         Me.Label6.TabIndex = 2
-        Me.Label6.Text = "MAX 55:"
+        Me.Label6.Text = "MAX 75:"
         '
         'FlatListBox1
         '
-        Me.FlatListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.FlatListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FlatListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.FlatListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.FlatListBox1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlatListBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.FlatListBox1.ForeColor = System.Drawing.SystemColors.Info
+        Me.FlatListBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.FlatListBox1.FormattingEnabled = True
         Me.FlatListBox1.ItemHeight = 15
-        Me.FlatListBox1.Location = New System.Drawing.Point(9, 137)
+        Me.FlatListBox1.Location = New System.Drawing.Point(0, 119)
         Me.FlatListBox1.Name = "FlatListBox1"
-        Me.FlatListBox1.Size = New System.Drawing.Size(285, 467)
+        Me.FlatListBox1.Size = New System.Drawing.Size(304, 495)
         Me.FlatListBox1.TabIndex = 12
         '
         'lblItemCount
@@ -133,36 +130,23 @@ Partial Class Form1
         Me.lblItemCount.AutoSize = True
         Me.lblItemCount.BackColor = System.Drawing.Color.Transparent
         Me.lblItemCount.ForeColor = System.Drawing.Color.Red
-        Me.lblItemCount.Location = New System.Drawing.Point(74, 102)
+        Me.lblItemCount.Location = New System.Drawing.Point(74, 84)
         Me.lblItemCount.Name = "lblItemCount"
         Me.lblItemCount.Size = New System.Drawing.Size(19, 21)
         Me.lblItemCount.TabIndex = 10
         Me.lblItemCount.Text = "0"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label3.Location = New System.Drawing.Point(6, 85)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(156, 16)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Find Active/Inactive Game"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Olive
-        Me.Label4.Location = New System.Drawing.Point(195, 87)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(213, 84)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(100, 13)
+        Me.Label4.Size = New System.Drawing.Size(91, 21)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Debugging Purpose"
+        Me.Label4.Text = "Version 2.0"
         '
         'Label2
         '
@@ -170,23 +154,11 @@ Partial Class Form1
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.DarkSeaGreen
-        Me.Label2.Location = New System.Drawing.Point(193, 71)
+        Me.Label2.Location = New System.Drawing.Point(6, 68)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(101, 16)
         Me.Label2.TabIndex = 8
-        Me.Label2.Text = "07/30/17 : 1018"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.YellowGreen
-        Me.Label1.Location = New System.Drawing.Point(6, 68)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 16)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Version: 1.4"
+        Me.Label2.Text = "August 10, 2017"
         '
         'FlatMini1
         '
@@ -255,9 +227,7 @@ Partial Class Form1
     Friend WithEvents tmrBsTv As Timer
     Friend WithEvents tmrWelcome As Timer
     Friend WithEvents tmrHotkey As Timer
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents lblItemCount As Label
     Friend WithEvents FlatListBox1 As ListBox

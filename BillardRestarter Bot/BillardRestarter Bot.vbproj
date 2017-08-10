@@ -147,12 +147,6 @@
     <None Include="Resources\android_inactive.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\android_runningapp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\android_wait.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\billard_inactive2.png" />
     <None Include="Resources\billard_active2.png" />
     <None Include="Resources\billard_inactive3.bmp" />
